@@ -1,5 +1,5 @@
-%Code from https://scipython.com/book/chapter-7-matplotlib/problems/p72/the-julia-set/
-% "Learning Scientific Programming with Python" https://scipython.com/
+#Code from https://scipython.com/book/chapter-7-matplotlib/problems/p72/the-julia-set/
+# "Learning Scientific Programming with Python" https://scipython.com/
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,7 +7,7 @@ import matplotlib.cm as cm
 
 # Image width and height; parameters for the plot
 im_width, im_height = 500, 500
-c = complex(.5, 0.5)
+c = complex(.5, 0.5)  #Edit c value, (real, complex)
 zabs_max = 10
 nit_max = 1000
 xmin, xmax = -1.5, 1.5
@@ -24,7 +24,7 @@ for ix in range(im_width):
                     iy / im_height * yheight + ymin)
         # Do the iterations
         while abs(z) <= zabs_max and nit < nit_max:
-            z = z**2 + c
+            z = z**2 + c  #Function we're studying under iterations
             nit += 1
         shade = 1-np.sqrt(nit / nit_max)
         ratio = nit / nit_max
